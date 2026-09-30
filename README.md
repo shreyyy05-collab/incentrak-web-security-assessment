@@ -62,11 +62,32 @@ Repeated testing after application changes to determine whether identified contr
 ### 5. Validation
 Compared subsequent results against earlier observations and documented remaining security concerns.
 
-## Current Assessment Status
+## Latest Assessment Snapshot
 
-A newer validation assessment was performed on **September 29, 2026**. The latest report is being reviewed and sanitized before detailed results are published in this portfolio repository.
+The latest assessment evidence was captured on **September 30, 2026** using **OWASP ZAP 2.17.0**.
 
-This prevents older assessment data from being represented as the application's current security state.
+The ZAP alert summary contained **24 alert categories**:
+
+| Risk Level | Alert Categories |
+| --- | ---: |
+| High | 0 |
+| Medium | 4 |
+| Low | 6 |
+| Informational | 14 |
+
+Examples of security controls and observations identified for review included:
+
+- Content Security Policy (CSP) header configuration
+- Anti-clickjacking protection
+- HTTP Strict Transport Security (HSTS)
+- X-Content-Type-Options
+- Cross-domain configuration
+- Server/version information exposure
+- Other informational technology and response observations
+
+These are scanner observations and security-review items; they are **not automatically treated as confirmed exploitable vulnerabilities**. Manual validation and application context are required to determine actual risk.
+
+The public portfolio intentionally omits the assessment hostname, port, sensitive routes, request/response data, session information, and other infrastructure details visible in the original evidence.
 
 ## Security Controls Reviewed
 
@@ -99,6 +120,6 @@ This project demonstrates practical experience with the security assessment life
 
 This repository is a sanitized professional portfolio case study. It is not intended to disclose exploitable information about a production system. Sensitive URLs, authentication material, session information, customer or business data, proprietary implementation details, and other confidential information are excluded.
 
-## Next Steps
+## Evidence Handling
 
-The September 29, 2026 reassessment will be incorporated after the latest ZAP report is reviewed and sanitized. The results section will then document verified remediation progress and remaining findings without exposing sensitive application details.
+The original September 30 assessment evidence is retained privately. Public evidence will be sanitized before publication so the portfolio can demonstrate assessment methodology and results without disclosing sensitive infrastructure or application information.
